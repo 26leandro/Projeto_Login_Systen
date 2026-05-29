@@ -1,0 +1,17 @@
+Node.js:Permite usar o Java Scritp fora do navegador.
+
+NPM: Gerenciador de pacotes do Node js.
+
+Docker: Cria um ambiente padronizado para rodar o sistema. 
+
+npm init -y: Gera o arquivo package.json;
+
+express: Cria rotas com servidor HTTP
+
+bcryptjs: faz a criptografia das senhas
+
+jsonwebtoken: Gera o tokem da sessão para o login; 
+
+dotenv mongoose: Conecta com o ambiente (>npm install express bcryptjs jsonwebtoken dotenv mongoose);
+
+nodemon: a cada alteração no código ele reinicia o servidor; reinicia automaticamente. (pm install --save-dev nodemon )
