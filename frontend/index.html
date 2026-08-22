@@ -1,56 +1,43 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Systen</title>
-
+    <title>Login System</title>
     <link rel="stylesheet" href="./css/styleDark.css">
     <link href="https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap" rel="stylesheet">
     <script src="./js/login.js" defer></script>
 </head>
-
 <body>
-    <!-- div principal do login - A classe login-container é usada no CSS  -->
+    <!-- Botão único usando apenas a classe -->
+    <button class="theme-toggle-btn">🌙</button>
+
     <div class="login-container">
-
-        <!-- Titulo principal da pagina  -->
         <h1>Login</h1>
-
-        <!-- Paragrafo para textos auxiliares de instuções para usários -->
-        <p> Acesse sua Conta </p>
-
+        <p>Acesse sua Conta</p>
+        
         <form>
-            <!-- Éa div que a label e o imput -->
             <div class="input-group">
-
-                <!-- Texto que descreve o nosso campo -->
                 <label for="email">E-mail</label>
-
-                <!-- Campo de entrada do e-mail -->
                 <input id="email" type="text" placeholder="Digite seu e-mail">
             </div>
-
+            
             <div class="input-group">
-
                 <label for="senha">Senha</label>
-
                 <input id="senha" type="password" placeholder="Digite sua senha">
             </div>
-
+            
             <button type="submit">Entrar</button>
-
-
-            </form>
-
-            <div class="footer">
-                <span>Não tem Conta?</span>
-                <a href="./register.html">Criar Conta</a>
-            </div>
-
+        </form>
+        
+        <div class="footer">
+            <span>Não tem Conta?</span>
+            <a href="./register.html">Criar Conta</a>
+        </div>
     </div>
-</body>
 
+    <!-- Script do tema importado no final do body -->
+     
+    <script src="./theme.js"></script>
+</body>
 </html>

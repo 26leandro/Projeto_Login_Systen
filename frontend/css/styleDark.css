@@ -11,8 +11,33 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     color: #fff;
+}
 
+/* =================
+Botão de Alerar Tema
+===================*/
+
+.theme-toggle-btn{
+position: absolute;
+width: 30px;
+height: 50px;
+top: 20px;
+right: 30px;
+margin-top: 0;
+padding:1px;
+border-radius: 50%;
+font-size: 25px;
+background: rgba(2, 91, 96, 0.738);
+border: 0px solid rgba(255, 255, 255, 0.4);
+transition: 0.3s;
+z-index: 1000;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 .login-container{
@@ -103,4 +128,65 @@ button:hover{
 
 .footer a:hover{
     color: #66d9ff;
+}
+
+/* Botão do tema */
+.theme-toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.theme-toggle-btn:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Modificadores para quando o tema claro (class="light") estiver ativo no body */
+body.light {
+    background: linear-gradient(135deg, #e0f2fe, #bae6fd, #7dd3fc);
+    color: #0f172a;
+}
+
+body.light .theme-toggle-btn {
+    background-color: rgba(15, 23, 42, 0.1);
+    border: 1px solid rgba(15, 23, 42, 0.2);
+    color: #0f172a;
+}
+
+body.light .login-container,
+body.light .register-container {
+    background: #ffffff; /* Mudei para branco aqui */
+    box-shadow: 0 20px 40px rgba(0, 114, 255, 0.15);
+}
+
+body.light input {
+    background: #f1f5f9;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+}
+
+/*Cores dos Textos no Tema Claro*/
+
+/* Título e parágrafo no tema claro */
+body.light .login-container h1 { color: #0f172a; }
+body.light .login-container p { color: #475569; }
+
+/* Labels dos inputs no tema claro */
+body.light .input-group label { color: #334155; }
+
+/*Cores do Botão "Entrar*/
+
+body.light button {
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); 
 }
