@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap" rel="stylesheet">
     <script src="./js/login.js" defer></script>
 </head>
+
 <body>
     <!-- Botão único usando apenas a classe -->
     <button class="theme-toggle-btn">🌙</button>
@@ -15,29 +17,45 @@
     <div class="login-container">
         <h1>Login</h1>
         <p>Acesse sua Conta</p>
-        
-        <form>
+
+        <form id="form-container">
             <div class="input-group">
                 <label for="email">E-mail</label>
                 <input id="email" type="text" placeholder="Digite seu e-mail">
             </div>
-            
+
             <div class="input-group">
                 <label for="senha">Senha</label>
                 <input id="senha" type="password" placeholder="Digite sua senha">
             </div>
-            
+
             <button type="submit">Entrar</button>
         </form>
-        
+
         <div class="footer">
             <span>Não tem Conta?</span>
             <a href="./register.html">Criar Conta</a>
         </div>
     </div>
 
+    <!--Criando o Modal Global -->
+
+    <div id="customAlert" class="alert-overlay">
+        <div class="alert-box">
+            <h3 id="alertTitle">Aviso</h3>
+            <P id="alertMessage">mensagem</P>
+            <button type="button" id="btnAlertConfirm">
+                Ok , ENTENDI
+            </button>
+        </div>
+    </div>
+        
+    
     <!-- Script do tema importado no final do body -->
-     
-    <script src="./theme.js"></script>
+
+        <script src="./js/theme.js"></script>
+        <script src="./js/modal.js"></script>
+        <script src="./js/login.js"></script>
 </body>
+
 </html>

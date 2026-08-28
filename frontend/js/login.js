@@ -1,8 +1,11 @@
-const form = document.querySelector("form");
+const form = document.getElementById("form-container");
+
 form.addEventListener("submit", async (e) => {
+
     e.preventDefault();
     const email = document.getElementById("email").value;
     const senha = document.getElementById("senha").value;
+
     const resposta = await fetch("http://localhost:3001/api/login", {
         method: "POST",
         headers: {
@@ -19,6 +22,13 @@ form.addEventListener("submit", async (e) => {
         alert("Login realizado");
         window.location.href = "../home.html";
     } else {
-        alert(json.message);
+        //alert(json.message);
+
+        mostraAlerta(
+            json.message,
+            null,
+            "erro"
+        )
+        
     }
 });

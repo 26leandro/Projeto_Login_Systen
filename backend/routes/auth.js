@@ -54,9 +54,19 @@ router.post("/login", async (req, res) => {
   try {
     const { email, senha } = req.body;
 
-    if (!email || !senha) {
+    if (!email & !senha) {
       return res.status(400).json({
         message: "Preencha todos os campos."
+      });
+    }
+     if (!email) {
+      return res.status(400).json({
+        message: "Preencha o campo email."
+      });
+    }
+     if (!senha) {
+      return res.status(400).json({
+        message: "Preencha sua senha."
       });
     }
 
