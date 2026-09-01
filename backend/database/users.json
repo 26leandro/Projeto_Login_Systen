@@ -4,5 +4,23 @@
     "nome": "João",
     "email": "joao@email.com",
     "senha": "$2b$10$cRm3ugNunl52zDoEkHE5ZOI3fDpemXqpsDJ2P3K4ZnB7qnY/QLaya"
+  },
+  {
+    "id": 1788218049552,
+    "nome": "Leandro",
+    "email": "leandro@email.com",
+    "senha": "$2b$10$TD9PFe8JO0hBYXch6fYplexGvC29Fwl.PEK2swOpXsMVXdD2NzKXm"
+  },
+  {
+    "id": 1788220112936,
+    "nome": "Leandro Hugostoso",
+    "email": "leandrohugostoso@email.com",
+    "senha": "$2b$10$lMKIDRUeiCgm5M1YnvBSWeQXO5I3ags8Z56oAEXvn5pk8BQINS8xq"
+  },
+  {
+    "id": 1788221063363,
+    "nome": "Leandro Hugostoso Lindo",
+    "email": "leandrohogolindo@email.com",
+    "senha": "$2b$10$wLel1SIbujuHC5hVIunU5uIEoHIFKfMbsermSBnFofImYqky2BvOS"
   }
 ]

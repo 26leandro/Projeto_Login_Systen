@@ -19,8 +19,15 @@ form.addEventListener("submit", async (e) => {
     const json = await resposta.json();
     if (resposta.ok) {
         localStorage.setItem("token", json.token);
-        alert("Login realizado");
-        window.location.href = "../home.html";
+        mostraAlerta(
+            json.message,
+            null,
+            "sucesso",
+            () =>{
+               
+               window.location.href = "../home.html";
+           }
+        );
     } else {
         //alert(json.message);
 
@@ -29,6 +36,6 @@ form.addEventListener("submit", async (e) => {
             null,
             "erro"
         )
-        
+
     }
 });

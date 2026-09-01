@@ -23,22 +23,22 @@
             <form id="registerForm">
                 <div class="input-group">
                     <label>Nome Completo</label>
-                    <input type="text" placeholder="Digite seu nome">
+                    <input type="text" placeholder="Digite seu nome" id="nome">
                 </div>
                 
                 <div class="input-group">
                     <label for="e-mail">E-mail</label>
-                    <input id="e-mail" type="text" placeholder="Digite seu e-mail">
+                    <input id="e-mail" type="text" placeholder="Digite seu e-mail" id="e-mail">
                 </div>
                 
                 <div class="input-group">
                     <label>Senha</label>
-                    <input type="password" placeholder="Digite sua senha">
+                    <input type="password" placeholder="Digite sua senha" id="senha">
                 </div>
                 
                 <div class="input-group">
                     <label>Confirmar Senha</label>
-                    <input type="password" placeholder="Repita sua senha">
+                    <input type="password" placeholder="Repita sua senha" id="Confirmar" >
                 </div>
                 
                 <button type="submit">Entrar</button>
@@ -46,7 +46,22 @@
         </section>
     </main>
 
+    <!--Criando o Modal Global -->
+
+    <div id="customAlert" class="alert-overlay">
+        <div class="alert-box">
+            <h3 id="alertTitle">Aviso</h3>
+            <P id="alertMessage">mensagem</P>
+            <button type="button" id="btnAlertConfirm">
+                Ok , ENTENDI
+            </button>
+        </div>
+    </div>
+        
+
    <!-- Script do tema importado no final do body -->
     
-    <script src="./theme.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/modal.js"></script>
 </html>
