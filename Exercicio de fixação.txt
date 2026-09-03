@@ -1,0 +1,61 @@
+1. Qual é a função do register.js?
+
+Ele é o arquivo responsável por gerenciar a página de cadastro no lado do cliente (Front-End). Sua função é capturar os dados digitados pelo usuário, fazer a validação inicial (como checar se as senhas coincidem) e enviar essas informações para a API no servidor.
+
+2. O que faz addEventListener("submit", ...)?
+
+Ele "escuta" o evento de envio do formulário. Quando o usuário clica no botão de cadastrar, esse método intercepta a ação e executa a função que você definiu, no exato momento em que o formulário tenta ser enviado.
+
+3. Para que serve e.preventDefault()?
+
+Ele bloqueia o comportamento padrão do formulário no navegador, que é recarregar a página ao ser enviado. Sem ele, a página piscaria e você perderia os dados antes de conseguir enviá-los via JavaScript.
+
+4. O que o .value faz?
+
+Ele recupera o valor atual (o texto que o usuário digitou) de dentro de um campo de entrada (<input>) do HTML.
+
+5. Qual a função do fetch()?
+
+É a ferramenta nativa do JavaScript usada para fazer requisições HTTP. No seu projeto, ele faz a "ponte", enviando os dados do formulário do Front-End para o Back-End sem precisar recarregar a página.
+
+6. Por que utilizamos o método POST?
+
+O método POST é utilizado quando queremos enviar informações para o servidor com o objetivo de criar um novo recurso (neste caso, um novo usuário). Além disso, ele é mais seguro que o GET, pois envia os dados no corpo da requisição e não expostos na URL.
+
+7. Para que serve Content-Type: application/json?
+
+Ele avisa o servidor que os dados que estão chegando no corpo da requisição (body) estão formatados como JSON, para que o Back-End saiba exatamente como ler e interpretar aquela informação.
+
+8. Qual a função do JSON.stringify()?
+
+O servidor se comunica através de textos, mas no JavaScript manipulamos objetos. O JSON.stringify() transforma o seu objeto JavaScript (que tem nome, email, senha) em uma string de texto no formato JSON para que possa viajar pela rede.
+
+9. O que é enviado no body?
+
+No corpo (body) da requisição, são enviados os dados capturados do formulário que você transformou em texto (geralmente: nome, email, e senha).
+
+10. Como o backend recebe esses dados?
+
+No Back-End (utilizando o Express), a rota recebe uma requisição (req). Os dados são acessados através da propriedade req.body (geralmente graças a um middleware como express.json(), que pega a string JSON que chegou e transforma de volta em um objeto JavaScript).
+
+11. Para que serve bcrypt.hash() no backend?
+
+Ele serve para criptografar a senha do usuário, transformando-a em uma sequência embaralhada de caracteres (hash). Isso garante a segurança do banco de dados, pois mesmo que os dados sejam vazados, ninguém saberá qual é a senha original.
+
+12. O que significa resposta.ok?
+
+É uma propriedade da resposta do fetch(). Ela retorna true se a requisição foi bem-sucedida (geralmente os status HTTP entre 200 e 299). Se houver um erro (como um status 400 de dados inválidos ou 500 de erro no servidor), ela retorna false.
+
+13. Para que serve resposta.json()?
+
+Quando o Back-End envia uma resposta de volta para o Front-End, essa resposta também vem em formato de texto. O resposta.json() converte esse texto de volta para um objeto JavaScript manipulável para que você possa ler a mensagem do servidor.
+
+14. O que acontece quando o cadastro é realizado com sucesso?
+
+O sistema exibe uma mensagem de feedback positivo ao usuário (utilizando o modal de notificações que você implementou) informando que o cadastro foi criado e, em seguida, redireciona o usuário para a tela de login.
+
+15. Qual é a diferença entre a validação feita no register.js e a validação feita no auth.js?
+
+Validação no register.js (Front-End): Focada na experiência do usuário (UX). Ela dá respostas imediatas (ex: "As senhas não coincidem" ou "Preencha todos os campos") sem precisar gastar recursos consultando o servidor.
+
+Validação no auth.js (Back-End): Focada na segurança e integridade. Como o Front-End pode ser burlado, o Back-End é a última linha de defesa. Ele verifica novamente todos os dados e faz validações exclusivas, como checar diretamente no banco de dados se o e-mail informado já existe.
