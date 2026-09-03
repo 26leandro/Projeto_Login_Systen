@@ -35,7 +35,6 @@ O Login System é uma aplicação web desenvolvida para demonstrar um sistema de
 
 ## Estrutura do projeto
 
-```text
 Login-System/
 │
 ├── frontend/
@@ -117,11 +116,11 @@ Como utilizar
 
 Demonstração visual
 
-Tela de Login: ![alt text](image.png)
+Tela de Login: ![alt text](./image/image.png)
 
-Tela de Cadastro: !![alt text](image-1.png)
+Tela de Cadastro: !![alt text](./image/image-1.png)
 
-Tema Dark / Light:![alt text](image-2.png) ![alt text](image-3.png)
+Tema Dark / Light:![alt text](./image/image-2.png) ![alt text](./image/image-3.png)
 
 Autor
 
